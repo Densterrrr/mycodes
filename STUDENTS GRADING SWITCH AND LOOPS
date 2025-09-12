@@ -1,0 +1,88 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int choice, choice2;
+do{
+cout<<"\nStudent System Information";
+cout<<"\n1. Manage Student";
+cout<<"\n2. Exit.";
+cout<<"\nChoose an option: ";
+cin>>choice;
+
+
+if(choice==1){
+
+do{
+cout<<"\nStudent System Information";
+cout<<"\n1. Add grades and compute average";
+cout<<"\n2. Back to Menu";
+cout<<"\nChoose an option: ";
+cin>>choice2;
+
+if(choice2==1){
+
+int subjects;
+
+cout<<"\nHow many subjects does the student have? ";
+cin>>subjects;
+
+while (subjects<=0){
+cout<<"INVALID INPUT!";
+cout<<"Please enter again a valid number: ";
+cin>>subjects;
+cout<<"\nYou entered: "<<subjects;
+
+}
+int sum = 0;
+
+for (int i = 1; i<=subjects; i++){
+int grade;
+
+cout<<"\nEnter grade for this subject "<<i<<": ";
+cin>>grade;
+
+while (grade<60){
+cout<<"INVALID INPUT!";
+cout<<"\nEnter a valid grade for this subject " << i << ": ";
+cin>>grade;
+
+cout<<"Grade of the subject "<<i<<" is: "<<grade;
+
+
+}
+
+sum = sum + grade;
+
+}
+
+double average;
+average = (double) sum / subjects;
+
+cout<<"The average grade of this student is: "<<average;
+
+}
+
+
+}
+
+while (choice2!=2);
+
+
+
+}
+
+
+else if(choice==2){
+cout<<"Exiting program....";
+}
+
+}
+
+while (choice!=2);
+
+
+return 0;
+
+}
