@@ -1,0 +1,87 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int change, payment, quantity, choice, total = 0;
+    
+
+    do{
+        cout<<"\nWELCOME TO THE SHOP!\n";
+        cout << "[1] Burger       - ₱50.00\n";
+        cout << "[2] Fries        - ₱30.00\n";
+        cout << "[3] Hotdog       - ₱25.00\n";
+        cout << "[4] Soda         - ₱20.00\n";
+        cout << "[5] Ice Cream    - ₱35.00\n";
+        cout << "[0] Finish Order\n";
+        cout << "=======================================\n";
+        cout<<"Enter your choice: ";
+        cin>>choice;
+
+        switch(choice){
+            case 1:
+            cout<<"Enter quantity: ";
+            cin>>quantity;
+            cout<< quantity << " Burger added\n";
+            total += quantity * 50;
+            cout<<"Current total: " << "₱" <<total;
+            break;
+            
+            case 2:
+            cout<<"Enter quantity: ";
+            cin>>quantity;
+            cout<< quantity << " Fries added\n";
+            total += quantity * 30;
+            cout<<"Current total: " << "₱" << total;
+            break;
+            
+            case 3:
+            cout<<"Enter quantity: ";
+            cin>>quantity;
+            cout<< quantity << " Hotdog added\n";
+            total += quantity * 25;
+            cout<<"Current total: " << "₱" << total;
+            break;
+            
+            case 4:
+            cout<<"Enter quantity: ";
+            cin>>quantity;
+            cout<< quantity << " Soda added\n";
+            total += quantity * 20;
+            cout<<"Current total: " << "₱" << total;
+            break;
+                        
+            case 5:
+            cout<<"Enter quantity: ";
+            cin>>quantity;
+            cout<< quantity << " Ice cream added\n";
+            total += quantity * 35;
+            cout<<"Current total: " << "₱" << total;
+            break;
+            
+            case 0:
+            cout<<"Order finished!" << endl;
+            cout<<"Your total amount is: " << "₱" << total << endl;
+            cout<<"Please enter payment amount: ";
+            cin>>payment;
+            change = payment - total;
+            
+            cout<<"Payment: " << payment << endl;
+            cout<<"Change: " << change << endl;
+            
+            for(int i = 0; i < 3; ++i){
+                cout<<"Thank you for using our POS :)" << endl;
+            }
+            
+            break;
+            
+            default:
+            cout<<"Invalid choice. Please try again.";
+            break;
+        }
+        
+    }
+    
+    while(choice!= 0);
+    
+    return 0;
+}
