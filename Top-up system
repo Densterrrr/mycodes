@@ -1,0 +1,116 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string ign, choice;
+    int amount,balance,order = 0;
+    
+    
+    cout<<"Top-up"<<endl;
+    
+    cout<<"\nSTEP 1."<<endl;
+    cout<<"Please enter your IGN: ";
+    cin>>ign;
+    
+
+        
+    
+    cout<<"\nSTEP 2."<<endl;
+    cout<<"This are the promos that you can top-up."<<endl;
+    cout<<"a. 11 rs - P10             f. 111 rs - P100\nb. 23 rs - P20             g. 553 rs - P500\nc. 35 rs - P30             h. 1119 rs - P1000\nd. 56 rs - P50             i. 3369 rs - P3000\ne. 81 rs - P70             j. 5511 rs - P5000\n\nAvail the new Roblox Pass now!\nk. Roblox Pass - P550\nl. Elite Roblox Pass - P1100"<<endl;
+        do {
+    cout<<"\nSelect the promo that you want to top-up\nType 'done' if you are ready to pay: ";
+    cin>>choice;
+    
+    if (choice == "a" ){
+    cout<<"You chose the 11 rs promo."<<endl;
+    order += 10;
+    cout<<"Your current order amount is: P"<<order<< endl;
+    cout<<"";
+    }
+    else if (choice == "b"){
+    cout<<"You chose the 23 rs promo."<<endl;
+    order += 20;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "c"){
+    cout<<"You chose the 35 rs promo."<<endl;
+    order += 30;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "d"){
+    cout<<"You chose the 56 rs promo."<<endl;
+    order += 50;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "e"){
+    cout<<"You chose the 81 rs promo."<<endl;
+    order += 70;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "f"){
+    cout<<"You chose the 111 rs promo."<<endl;
+    order += 100;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "g"){
+    cout<<"You chose the 553 rs promo."<<endl;
+    order += 500;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "h"){
+    cout<<"You chose the 1119 rs promo."<<endl;
+    order += 1000;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "i"){
+    cout<<"You chose the 3369 rs promo."<<endl;
+    order += 3000;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "j"){
+    cout<<"You chose the 5511 rs promo."<<endl;
+    order += 5000;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "k"){
+    cout<<"You chose the Roblox Pass."<<endl;
+    order += 550;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "l"){
+    cout<<"You chose the Elite Roblox Pass."<<endl;
+    order += 1100;
+    cout<<"Your current order amount is: "<<order << endl;
+    }
+    else if (choice == "done"){
+        
+    }
+    else{
+        cout<<"Invalid letter. Please try again."<<endl;
+    }
+    
+} while (choice != "done");
+
+    cout<<"Your balance is: " << order <<endl;
+    
+    cout<<"\nSTEP 3."<<endl;
+    cout<<"Payment Process.\n";
+    cout<<"Ign: " <<ign<<endl;
+    cout<<"Your total amount is: P"<<order<<endl;
+    cout<<"Enter your payment: ";
+    cin>>amount;
+    if (order == 0){
+    cout<<"You can't pay without ordering a promo.\nPlease try again.";
+    return 0;
+    
+    }
+    else{
+    balance = amount - order;
+    cout<<"Your change is: P"<<balance<<endl;
+    }
+    
+    cout<<"Thank you for using our system."
+    
+    return 0;
+}
